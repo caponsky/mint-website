@@ -9,7 +9,6 @@ const NFTAddress = "0xde52aEe09f6f4EeB843B5a5500e2EE005B640F2B";
 export default function MainMint(props) {
     const {
         accounts,
-        setAccounts
     } = props
 
     const isConnected = Boolean(accounts[0]);

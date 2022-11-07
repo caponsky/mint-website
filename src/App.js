@@ -1,20 +1,26 @@
-import React, {useState} from 'react';
-import './App.css';
-import MainMint from './MainMint';
-import NavBar from './NavBar';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainPage from './MainPage';
+import About from './pages/About';
+import Mint from './pages/Mint';
+import Team from './pages/Team';
+import ErrorPage from './pages/errorpage';
+
 
 function App() {
 
-  const [accounts, setAccounts] =useState([]);
-
   return (
-    <div className='overlay'>
-    <div className='App'>
-      <NavBar accounts={accounts} setAccounts={setAccounts}/>
-      <MainMint accounts={accounts} setAccounts={setAccounts}/>
-    </div>
-    <div className='moving-background'></div>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path='/' element={<MainPage />}/>
+          <Route path='/about' element={<About />} />
+          <Route path='/mint' element={<Mint />} />
+          <Route path='/team' element={<Team />} />
+          <Route path='*' element={<ErrorPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

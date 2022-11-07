@@ -51,24 +51,28 @@ export default function MainMint(props) {
     <Flex justify='center' align='center' height='100vh' paddingBottom='150px'>
         <Box width='520px'>
         <div>
-            <Text fontSize='45px' textShadow='0 5px #000000'>TrollPunks</Text>
+            <Text
+                className='trollpunks' 
+            >
+                Troll Punks
+            </Text>
             <Text
                 fontSize='30px'
                 letterSpacing='-5.5%'
                 fontFamily='VT323'
                 textShadow='0 2px 2px #000000'
             >
-            It's 2022 and no1 is winning with NFT's, 
-            therefore here is another NFT collection 
-            for you to spend some money like a retarded 
-            degenerate, and without giving any fucks.
+                It's 2022 and no1 is winning with NFT's, 
+                therefore here is another NFT collection 
+                for you to spend some money like a retarded 
+                degenerate, and without giving any fucks.
             </Text>
         </div>
         {isConnected ? (
             <div>
                 <Flex justify='center' align='center'>
                     <Button
-                        backgroundColor='	#ffb898'
+                        backgroundColor='#ffb898'
                         borderRadius='5px'
                         boxShadow='0px 2px 2px 1px #0f0f0f'
                         color='black'
@@ -92,7 +96,7 @@ export default function MainMint(props) {
                         value={mintAmount}
                     />
                     <Button
-                        backgroundColor='	#ffb898'
+                        backgroundColor='#ffb898'
                         borderRadius='5px'
                         boxShadow='0px 2px 2px 1px #0f0f0f'
                         color='black'

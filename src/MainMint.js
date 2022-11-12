@@ -11,6 +11,8 @@ export default function MainMint(props) {
         accounts,
     } = props
 
+    const [mintAmount, setMintAmount] = useState(1);
+
     const isConnected = Boolean(accounts[0]);
 
     async function handleMint() {
@@ -33,7 +35,7 @@ export default function MainMint(props) {
         }
     }
 
-    const [mintAmount, setMintAmount] = useState(1);
+    
 
     const handleMinus = () => {
         if(mintAmount <= 1) return;
@@ -51,9 +53,7 @@ export default function MainMint(props) {
     <Flex justify='center' align='center' height='100vh' paddingBottom='150px'>
         <Box width='520px'>
         <div>
-            <Text
-                className='trollpunks' 
-            >
+            <Text className='trollpunks'>
                 Troll Punks
             </Text>
             <Text
@@ -61,6 +61,7 @@ export default function MainMint(props) {
                 letterSpacing='-5.5%'
                 fontFamily='VT323'
                 textShadow='0 2px 2px #000000'
+                padding='0 30px'
             >
                 It's 2022 and no1 is winning with NFT's, 
                 therefore here is another NFT collection 
@@ -71,55 +72,20 @@ export default function MainMint(props) {
         {isConnected ? (
             <div>
                 <Flex justify='center' align='center'>
-                    <Button
-                        backgroundColor='#ffb898'
-                        borderRadius='5px'
-                        boxShadow='0px 2px 2px 1px #0f0f0f'
-                        color='black'
-                        cursor='pointer'
-                        fontFamily='inherit'
-                        padding='15px'
-                        marginTop='10px' 
-                        onClick={handleMinus}
-                    >
+                    <Button className='btn_plus_minus' onClick={handleMinus} >
                         -
                     </Button>
                     <Input 
+                        type='number'
+                        className='input_mint'
                         readOnly
-                        fontFamily='inherit'
-                        width='100px'
-                        height='40px'
-                        textAlign='center'
-                        paddingLeft='20px'
-                        marginTop='10px'
-                        type='number' 
                         value={mintAmount}
                     />
-                    <Button
-                        backgroundColor='#ffb898'
-                        borderRadius='5px'
-                        boxShadow='0px 2px 2px 1px #0f0f0f'
-                        color='black'
-                        cursor='pointer'
-                        fontFamily='inherit'
-                        padding='15px'
-                        marginTop='10px' 
-                        onClick={handlePlus}
-                    >
+                    <Button className='btn_plus_minus' onClick={handlePlus} >
                         +
                     </Button>
                 </Flex>
-                <Button
-                        backgroundColor='#fce5cd'
-                        borderRadius='5px'
-                        boxShadow='0px 2px 2px 1px #0f0f0f'
-                        color='black'
-                        cursor='pointer'
-                        fontFamily='inherit'
-                        padding='15px'
-                        marginTop='10px' 
-                        onClick={handleMint}
-                    >
+                    <Button className='btn_mint' onClick={handleMint} >
                         Mint
                     </Button>
             </div>
@@ -131,8 +97,11 @@ export default function MainMint(props) {
                     fontFamily='VT323'
                     textShadow='0 2px #000000'
                     color='	#a70b0b'
+                    padding='20px'
                 >
-                    One must be, obviously, conncted in order to mint 
+                    If one wants to mint we suggest that one uses 
+                    an ethereum test network wallet (e.g. Goerli),
+                     otherwise money will be lost   
                 </Text>
             )}
         </Box>

@@ -1,20 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Button, Flex, Image, Link, Spacer } from '@chakra-ui/react';
-import Facebook from "./assets/social-media-icons/facebook_32x32.png";
 import Twitter from "./assets/social-media-icons/twitter_32x32.png";
-import Email from "./assets/social-media-icons/email_32x32.png";
 import Metamask from "./assets/social-media-icons/MetaMask_Fox.svg.png";
+import Github from "./assets/social-media-icons/github.png";
+import Ethereumpng from "./assets/social-media-icons/ethereum.png"
 import truncateEthAddress from './truncate';
 
-export default function NavBar(props) {
 
-    let navigate = useNavigate();
+export default function NavBar(props) {
 
     const {
         accounts,
         setAccounts
     } = props
+
+    let navigate = useNavigate();
+
     const isConnected = Boolean(accounts[0])
 
     async function connectAccount () {
@@ -26,12 +28,37 @@ export default function NavBar(props) {
         }
     }
 
+    function handleConnect () {
+        if(window.ethereum) {
+            if(isConnected) {
+                return <Box 
+                    className='cntd'
+                    >Connected {truncateEthAddress(accounts[0])}
+                </Box>
+            }
+                return <Button 
+                    className='btn_connect'
+                    onClick={connectAccount} >
+                    <img src={Metamask} alt='' width='30px' height='30' />
+                    Connect
+                </Button>
+            
+            } 
+            return <Link href='https://metamask.io/download/' textDecoration='none' target='_blank'>
+                <Button 
+                    className='btn_install' > 
+                    Install
+                    <img src={Metamask} alt='' width='30px' height='30' />
+                </Button>
+            </Link>
+        }
+
   return (
     <Flex justify="space-between" align='center' padding='30px'>
         <Flex justify='space-around' width='40%' padding='0 75px'>
-            <Link href='https://www.facebook.com'>
+            <Link href='https://github.com/caponsky/mint-website'>
                 <Image 
-                    src={Facebook} 
+                    src={Github} 
                     boxSize='42px' 
                     margin='0 15px' 
                     className='socialmedia'/>
@@ -43,9 +70,9 @@ export default function NavBar(props) {
                     margin='0 15px' 
                     className='socialmedia'/>
             </Link>
-            <Link href='https://www.gmail.com'>
+            <Link href='https://rinkeby.etherscan.io/address/0xde52aEe09f6f4EeB843B5a5500e2EE005B640F2B'>
                 <Image 
-                    src={Email} 
+                    src={Ethereumpng} 
                     boxSize='42px' 
                     margin='0 15px' 
                     className='socialmedia'/>
@@ -68,7 +95,7 @@ export default function NavBar(props) {
                 className='menu'
                 onClick={() => {navigate('/mint')}}
             >
-                Mint
+                Road map
             </Box>
             <Spacer />
             <Box                 
@@ -79,17 +106,32 @@ export default function NavBar(props) {
             >
                 Team
             </Box>
-            <Spacer />      
-            {isConnected ? (<Box margin='0 15px' className='cntd'>Connected {truncateEthAddress(accounts[0])}</Box>) : (
-            <Button className='btn_connect'
-                    onClick={connectAccount}
-            >
-                <img src={Metamask} alt='' width='30px' height='30' />
-                Connect
-            </Button>
-        )}
+            <Spacer />   
+            {handleConnect()}
+            {/*{window.ethereum? 
+                (isConnected ? 
+                    (<Box 
+                        margin='0 15px' 
+                        className='cntd'>
+                        Connected {truncateEthAddress(accounts[0])}
+                    </Box>
+                    ) : (
+                    <Button className='btn_connect'
+                            onClick={connectAccount}
+                    >
+                        <img src={Metamask} alt='' width='30px' height='30' />
+                        Connect
+                    </Button>
+                )) : (
+                    <Link href='https://metamask.io/download/' textDecoration='none'>
+                        <Button 
+                            className='btn_install' > 
+                            Install
+                            <img src={Metamask} alt='' width='30px' height='30' />
+                        </Button>
+                    </Link>
+                )}*/}
         </Flex>
-     
     </Flex>
   )
 }

@@ -51,7 +51,7 @@ export default function MainMint(props) {
 
   return (
     <Flex justify='center' align='center' height='100vh' paddingBottom='150px'>
-        <Box width='520px'>
+        <Box className='mint_fullsection' width='520px'>
         <div>
             <Text className='trollpunks'>
                 Troll Punks

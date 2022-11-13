@@ -108,29 +108,6 @@ export default function NavBar(props) {
             </Box>
             <Spacer />   
             {handleConnect()}
-            {/*{window.ethereum? 
-                (isConnected ? 
-                    (<Box 
-                        margin='0 15px' 
-                        className='cntd'>
-                        Connected {truncateEthAddress(accounts[0])}
-                    </Box>
-                    ) : (
-                    <Button className='btn_connect'
-                            onClick={connectAccount}
-                    >
-                        <img src={Metamask} alt='' width='30px' height='30' />
-                        Connect
-                    </Button>
-                )) : (
-                    <Link href='https://metamask.io/download/' textDecoration='none'>
-                        <Button 
-                            className='btn_install' > 
-                            Install
-                            <img src={Metamask} alt='' width='30px' height='30' />
-                        </Button>
-                    </Link>
-                )}*/}
         </Flex>
     </Flex>
   )

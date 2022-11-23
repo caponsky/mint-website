@@ -1,7 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Box, Button, Flex, Image, Link, Spacer } from '@chakra-ui/react';
-import Twitter from "./assets/social-media-icons/twitter_32x32.png";
+import { Link, useNavigate } from 'react-router-dom';
+import { Box, Button, Flex, Image, Spacer } from '@chakra-ui/react';
+import Twitter from "./assets/social-media-icons/twitter.png";
 import Metamask from "./assets/social-media-icons/MetaMask_Fox.svg.png";
 import Github from "./assets/social-media-icons/github.png";
 import Ethereumpng from "./assets/social-media-icons/ethereum.png"
@@ -15,7 +15,7 @@ export default function NavBar(props) {
         setAccounts
     } = props
 
-    let navigate = useNavigate();
+    const navigate = useNavigate();
 
     const isConnected = Boolean(accounts[0])
 
@@ -31,30 +31,44 @@ export default function NavBar(props) {
     function handleConnect () {
         if(window.ethereum) {
             if(isConnected) {
-                return <Box 
-                    className='cntd'
-                    >Connected {truncateEthAddress(accounts[0])}
-                </Box>
+                return  <Box className='cntd'>
+                            Connected {truncateEthAddress(accounts[0])}
+                        </Box>
             }
-                return <Button 
-                    className='btn_connect'
-                    onClick={connectAccount} >
-                    <img src={Metamask} alt='' width='30px' height='30' />
-                    Connect
-                </Button>
+                return  <Button 
+                            className='btn_connect'
+                            onClick={connectAccount} >
+                            <img src={Metamask} alt='' width='30px' height='30' />
+                        Connect
+                        </Button>
             
             } 
-            return <Link href='https://metamask.io/download/' textDecoration='none' target='_blank'>
-                <Button 
-                    className='btn_install' > 
-                    Install
-                    <img src={Metamask} alt='' width='30px' height='30' />
-                </Button>
-            </Link>
+            return <Link 
+                        href='https://metamask.io/download/' 
+                        textDecoration='none' 
+                        target='_blank'>
+                    <Button 
+                        className='btn_install' > 
+                        Install
+                        <img src={Metamask} alt='' width='30px' height='30' />
+                    </Button>
+                    </Link>
         }
+    
+        /*function CustomLink({ to, children, ...props }) {
+            const resolvedPath = useResolvedPath(to)
+            const isActive = useMatch({ path: resolvedPath.pathname, end:true })
+            return (
+                <div className={isActive ? 'active' : ""} >
+                    <Link to={to} {...props}>
+                        {children}
+                    </Link>
+                </div>
+            )
+        }*/
 
   return (
-    <Flex justify="space-between" align='center' padding='30px'>
+    <Flex justify="space-between" align='center' padding='15px' className='nav'>
         <Flex justify='space-around' width='40%' padding='0 75px'>
             <Link href='https://github.com/caponsky/mint-website'>
                 <Image 
@@ -80,32 +94,38 @@ export default function NavBar(props) {
         </Flex>
         
         <Flex justify="space-between" align='center' padding='30px' width='40%'>
+            {/*<CustomLink href="/about">*/}
             <Box 
                 margin='0 15px' 
                 cursor='pointer' 
                 className='menu'
-                onClick={() => {navigate('/about')}}
+                onClick={() => navigate('/about')}
             >
                 About
             </Box>
+            {/*</CustomLink>*/}
             <Spacer />
+            {/*<CustomLink href="/mint">*/}
             <Box 
                 margin='0 15px' 
                 cursor='pointer' 
                 className='menu'
-                onClick={() => {navigate('/mint')}}
+                onClick={() => navigate('/mint')}
             >
                 Road map
             </Box>
+            {/*</CustomLink>*/}
             <Spacer />
+            {/*<CustomLink href="team">*/}
             <Box                 
                 margin='0 15px' 
                 cursor='pointer' 
                 className='menu'
-                onClick={() => navigate('/Team')}
+                onClick={() => navigate('/team')}
             >
                 Team
             </Box>
+            {/*</CustomLink>*/}
             <Spacer />   
             {handleConnect()}
         </Flex>

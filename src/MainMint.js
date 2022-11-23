@@ -99,7 +99,7 @@ export default function MainMint(props) {
                     color='	#a70b0b'
                     padding='20px'
                 >
-                    If one wants to mint we suggest that one uses 
+                    In order to mint we suggest that one uses 
                     an ethereum test network wallet (e.g. Goerli),
                      otherwise money will be lost   
                 </Text>

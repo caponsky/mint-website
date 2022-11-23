@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.roadmap_header_text {
+    text-align: center;
+    font-family: "Press Start 2P";
+    font-size: 45px; 
+    text-shadow: 0 5px #000000;
+}
+
+.roadmap_header {
+    width: 512px;
+    align-self: center;
+}

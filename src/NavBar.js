@@ -58,21 +58,21 @@ export default function NavBar(props) {
   return (
     <Flex justify="space-between" align='center' padding='15px' className='nav'>
         <Flex justify='space-around' width='40%' padding='0 75px'>
-            <Link href='https://github.com/caponsky/mint-website'>
+            <Link href='https://github.com/caponsky/mint-website' target="_blank">
                 <Image 
                     src={Github} 
                     boxSize='42px' 
                     margin='0 15px' 
                     className='socialmedia'/>
             </Link>
-            <Link href='https://www.twitter.com'>
+            <Link href='https://www.twitter.com' target="_blank">
                 <Image 
                     src={Twitter} 
                     boxSize='42px' 
                     margin='0 15px' 
                     className='socialmedia'/>
             </Link>
-            <Link href='https://rinkeby.etherscan.io/address/0xde52aEe09f6f4EeB843B5a5500e2EE005B640F2B'>
+            <Link href='https://rinkeby.etherscan.io/address/0xde52aEe09f6f4EeB843B5a5500e2EE005B640F2B' target="_blank">
                 <Image 
                     src={Ethereumpng} 
                     boxSize='42px' 
@@ -82,7 +82,6 @@ export default function NavBar(props) {
         </Flex>
         
         <Flex justify="space-between" align='center' padding='30px' width='40%'>
-            {/*<CustomLink href="/about">*/}
             <Box 
                 margin='0 15px' 
                 cursor='pointer' 

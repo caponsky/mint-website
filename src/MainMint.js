@@ -18,7 +18,7 @@ export default function MainMint(props) {
         if(props.accounts && props.accounts[0] && !isConnected) {
             setIsConnected(true);
         } 
-        }, [props])
+        }, [props, isConnected])
  
     async function handleMint() {
         if(window.ethereum) {

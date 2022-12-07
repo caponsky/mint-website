@@ -48,7 +48,7 @@ export default function Timeline () {
                 text: 'description4',
                 date: 'date4',
                 category: {
-                    tag: 'ceva',
+                    tag: 'TBA',
                     color: 'red'
                 },
                 link : {
@@ -61,7 +61,7 @@ export default function Timeline () {
                 text: 'description5',
                 date: 'date5',
                 category: {
-                    tag: 'ceva',
+                    tag: 'TBA',
                     color: 'red'
                 },
                 link : {
@@ -74,7 +74,7 @@ export default function Timeline () {
                 text: 'description6',
                 date: 'date6',
                 category: {
-                    tag: 'ceva',
+                    tag: 'TBA',
                     color: 'red'
                 },
                 link : {

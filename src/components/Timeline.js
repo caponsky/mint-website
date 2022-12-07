@@ -10,7 +10,7 @@ export default function Timeline () {
                 date: '1 jan 2022',
                 category: {
                     tag: 'Start',
-                    color: 'blue'
+                    color: 'green'
                 },
                 link : {
                     url : "http://google.com",
@@ -23,7 +23,7 @@ export default function Timeline () {
                 date: '29 feb 2022',
                 category: {
                     tag: 'Team',
-                    color: 'red'
+                    color: 'green'
                 },
                 link : {
                     url : "http://google.com",
@@ -32,8 +32,8 @@ export default function Timeline () {
                 id: 2
             },
             {
-                text: 'The minting contract is ready and mint is live. Remember that this is a unlimited collection with an unlimited mint window ',
-                date: '1 jul',
+                text: 'The contract is ready and the mint is live. Remember that this is an unlimited collection with an unlimited mint window ',
+                date: '1 jul 2022',
                 category: {
                     tag: 'Mint',
                     color: 'green'
@@ -49,7 +49,7 @@ export default function Timeline () {
                 date: 'date4',
                 category: {
                     tag: 'ceva',
-                    color: 'green'
+                    color: 'red'
                 },
                 link : {
                     url : "http://google.com",
@@ -62,7 +62,7 @@ export default function Timeline () {
                 date: 'date5',
                 category: {
                     tag: 'ceva',
-                    color: 'green'
+                    color: 'red'
                 },
                 link : {
                     url : "http://google.com",
@@ -75,7 +75,7 @@ export default function Timeline () {
                 date: 'date6',
                 category: {
                     tag: 'ceva',
-                    color: 'green'
+                    color: 'red'
                 },
                 link : {
                     url : "http://google.com",

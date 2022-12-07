@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ethers, BigNumber } from 'ethers';
 import NFT from './NFT.json';
 import { Box, Button, Flex, Input, Text } from '@chakra-ui/react';
@@ -7,14 +7,19 @@ import { Box, Button, Flex, Input, Text } from '@chakra-ui/react';
 const NFTAddress = "0xde52aEe09f6f4EeB843B5a5500e2EE005B640F2B";
 
 export default function MainMint(props) {
-    const {
-        accounts,
-    } = props
-
+    
     const [mintAmount, setMintAmount] = useState(1);
+    const [isConnected, setIsConnected] = useState(false);
 
-    const isConnected = Boolean(accounts[0]);
+    console.log('rerender MainMint')
 
+    useEffect (() => {
+        console.log(props)
+        if(props.accounts && props.accounts[0] && !isConnected) {
+            setIsConnected(true);
+        } 
+        }, [props])
+ 
     async function handleMint() {
         if(window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -53,8 +58,8 @@ export default function MainMint(props) {
     <Flex justify='center' align='center' height='100vh' paddingBottom='150px'>
         <Box className='mint_fullsection' width='520px'>
         <div>
-            <Text className='trollpunks'>
-                Troll Punks
+            <Text className='citypunks'>
+                City Punks
             </Text>
             <Text
                 fontSize='30px'
@@ -65,8 +70,7 @@ export default function MainMint(props) {
             >
                 It's 2022 and no1 is winning with NFT's, 
                 therefore here is another NFT collection 
-                for you to spend some money like a retarded 
-                degenerate, and without giving any fucks.
+                for you to spend some money in the most useless way possible.
             </Text>
         </div>
         {isConnected ? (

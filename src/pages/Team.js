@@ -1,22 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 
 export default function Team() {
 
-  let navigate = useNavigate();
-
   return (
     <div>
-      <div className='moving-background-four'>the About page</div>
-      <div>
-        <Button 
-          className='btn_back_3'
-          onClick={() => {navigate('/')}}
-        >
-          Back
-        </Button>
-      </div>
+      <Box className='page_header'>
+        <Text className='page_header_text'>Team</Text>
+      </Box>
+      <div className='moving-background-one'></div>
     </div>
   )
 }

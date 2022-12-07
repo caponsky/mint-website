@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Box, Button, Flex, Image, Spacer } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
+import { Link, Box, Button, Flex, Image, Spacer } from '@chakra-ui/react';
 import Twitter from "./assets/social-media-icons/twitter.png";
 import Metamask from "./assets/social-media-icons/MetaMask_Fox.svg.png";
 import Github from "./assets/social-media-icons/github.png";
@@ -55,18 +55,6 @@ export default function NavBar(props) {
                     </Link>
         }
     
-        /*function CustomLink({ to, children, ...props }) {
-            const resolvedPath = useResolvedPath(to)
-            const isActive = useMatch({ path: resolvedPath.pathname, end:true })
-            return (
-                <div className={isActive ? 'active' : ""} >
-                    <Link to={to} {...props}>
-                        {children}
-                    </Link>
-                </div>
-            )
-        }*/
-
   return (
     <Flex justify="space-between" align='center' padding='15px' className='nav'>
         <Flex justify='space-around' width='40%' padding='0 75px'>
@@ -99,24 +87,28 @@ export default function NavBar(props) {
                 margin='0 15px' 
                 cursor='pointer' 
                 className='menu'
-                onClick={() => navigate('/about')}
+                onClick={() => navigate('/')}
             >
-                About
+                City punks
             </Box>
-            {/*</CustomLink>*/}
-            <Spacer />
-            {/*<CustomLink href="/mint">*/}
             <Box 
                 margin='0 15px' 
                 cursor='pointer' 
                 className='menu'
-                onClick={() => navigate('/mint')}
+                onClick={() => navigate('/about')}
+            >
+                About
+            </Box>
+            <Spacer />
+            <Box 
+                margin='0 15px' 
+                cursor='pointer' 
+                className='menu'
+                onClick={() => navigate('/roadmap')}
             >
                 Road map
             </Box>
-            {/*</CustomLink>*/}
             <Spacer />
-            {/*<CustomLink href="team">*/}
             <Box                 
                 margin='0 15px' 
                 cursor='pointer' 
@@ -125,7 +117,6 @@ export default function NavBar(props) {
             >
                 Team
             </Box>
-            {/*</CustomLink>*/}
             <Spacer />   
             {handleConnect()}
         </Flex>

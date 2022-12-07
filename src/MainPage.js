@@ -1,19 +1,16 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import MainMint from './MainMint';
-import NavBar from './NavBar';
 
-export default function MainPage() {
 
-    const [accounts, setAccounts] =useState([]);
+export default function MainPage(props) {
 
   return (
-    <div className='overlay'>
-    <div className='App'>
-      <NavBar accounts={accounts} setAccounts={setAccounts}/>
-      <MainMint accounts={accounts} setAccounts={setAccounts}/>
-    </div>
-    <div className='moving-background-one'></div>
+    <div>
+      <div>
+        <MainMint accounts={props.accounts} setAccounts={props.setAccounts}/>
+      </div>
+      <div className='moving-background-one'></div>
     </div>
   )
 }

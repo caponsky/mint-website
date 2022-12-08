@@ -24,6 +24,7 @@ export default function TimelineItem (data) {
                 <a 
                     href = {data.link.url}
                     target = '_blank'
+                    rel='noreferrer'
                 >
                     {data.link.text}
                 </a>

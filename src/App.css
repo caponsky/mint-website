@@ -43,40 +43,6 @@
     background-position: 40% 40%;
 }
 
-.moving-background-two {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("./assets/background/pixel-art-8036729.gif");
-    background-size: cover;
-    background-position: 40% 37%;
-    
-}
-
-.moving-background-three {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("./assets/background/215462.gif");
-    background-size: cover;
-    background-position: 40% 40%;
-}
-
-.moving-background-four {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("./assets/background/211748.gif");
-    background-size: cover;
-    background-position: 40% 70%;
-}
-
 @media (max-width: 400px), (orientation: landscape) {
     .mint_fullsection{
         position: relative;

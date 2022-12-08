@@ -46,7 +46,8 @@ export default function NavBar(props) {
             return <Link 
                         href='https://metamask.io/download/' 
                         textDecoration='none' 
-                        target='_blank'>
+                        target='_blank'
+                        rel='noreferrer'>
                     <Button 
                         className='btn_install' > 
                         Install
@@ -58,21 +59,21 @@ export default function NavBar(props) {
   return (
     <Flex justify="space-between" align='center' padding='15px' className='nav'>
         <Flex justify='space-around' width='40%' padding='0 75px'>
-            <Link href='https://github.com/caponsky/mint-website' target="_blank">
+            <Link href='https://github.com/caponsky/mint-website' target="_blank" rel='noreferrer'>
                 <Image 
                     src={Github} 
                     boxSize='42px' 
                     margin='0 15px' 
                     className='socialmedia'/>
             </Link>
-            <Link href='https://www.twitter.com' target="_blank">
+            <Link href='https://www.twitter.com' target="_blank" rel='noreferrer'>
                 <Image 
                     src={Twitter} 
                     boxSize='42px' 
                     margin='0 15px' 
                     className='socialmedia'/>
             </Link>
-            <Link href='https://rinkeby.etherscan.io/address/0xde52aEe09f6f4EeB843B5a5500e2EE005B640F2B' target="_blank">
+            <Link href='https://rinkeby.etherscan.io/address/0xde52aEe09f6f4EeB843B5a5500e2EE005B640F2B' target="_blank" rel='noreferrer'>
                 <Image 
                     src={Ethereumpng} 
                     boxSize='42px' 

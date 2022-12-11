@@ -30,8 +30,6 @@
 }
 
 .citypunks {
-    position: relative;
-    bottom: 20px;
     font-size: 50px; 
     text-shadow: 0 5px #000000;
 }

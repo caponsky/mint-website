@@ -43,6 +43,7 @@
     background-position: 40% 40%;
 }
 
+
 @media (max-width: 400px), (orientation: landscape) {
     .mint_fullsection{
         position: relative;

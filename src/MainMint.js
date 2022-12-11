@@ -55,24 +55,8 @@ export default function MainMint(props) {
     }
 
   return (
-    <Flex justify='center' align='center' height='100vh' paddingBottom='150px'>
+    <Flex justify='center' align='center'  paddingBottom='150px' >
         <Box className='mint_fullsection' width='520px'>
-        <div>
-            <Text className='citypunks'>
-                City Punks
-            </Text>
-            <Text
-                fontSize='30px'
-                letterSpacing='-5.5%'
-                fontFamily='VT323'
-                textShadow='0 2px 2px #000000'
-                padding='0 30px'
-            >
-                It's 2022 and no1 is winning with NFT's, 
-                therefore here is another NFT collection 
-                for you to spend some money in the most useless way possible.
-            </Text>
-        </div>
         {isConnected ? (
             <div>
                 <Flex justify='center' align='center'>
@@ -95,7 +79,7 @@ export default function MainMint(props) {
             </div>
         ) : (
                 <Text
-                    marginTop='70px'
+                    marginTop='20px'
                     fontSize='30px'
                     letterSpacing='-5.5%'
                     fontFamily='VT323'

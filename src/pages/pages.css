@@ -21,7 +21,7 @@
     .page_header_text {
         font-size: 35px;
         line-height: 1.3em;
-        
+        text-shadow: 0 3.5px #000000;
     }
     .page_header {
         width: 100%;

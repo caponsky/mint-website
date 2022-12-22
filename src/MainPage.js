@@ -1,35 +1,27 @@
 import React from 'react';
 import './App.css';
 import MainMint from './MainMint';
-import { Text, Flex, Box} from '@chakra-ui/react'
+import { Text, Flex, Box} from '@chakra-ui/react';
+import Metamask from './components/Metamask';
 
 
 export default function MainPage(props) {
 
   return (
     <div >
-      <Flex className='for_mobile'>
-        
+      <Flex className='for_mobile' justify='center' align='center' marginTop='50px'>
+      <Metamask accounts={props.accounts} setAccounts={props.setAccounts}/>
       </Flex>
-      <Flex justify='center' align='center' height='50vh'>
-        <Box marginTop='150px' width='520px'>
-          
+      <Flex className='main_content' justify='center' align='center' height='50vh'>
+        <Box marginTop='50px' width='520px'>
             <Text className='citypunks'>
                 City Punks
             </Text>
-            <Text
-              fontSize='30px'
-              letterSpacing='-5.5%'
-              fontFamily='VT323'
-              textShadow='0 2px 2px #000000'
-              padding='0 30px'
-              margin='30px 0'
-              >
-              It's 2022 and no1 is winning with NFT's, 
+            <Text className='description_text' >
+              It's the end of 2022 and no one is winning with NFT's, 
               therefore here is another NFT collection 
               for you to spend some money in the most useless way possible.
             </Text>
-          
         </Box>
       </Flex>
       <div>

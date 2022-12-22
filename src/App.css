@@ -4,6 +4,8 @@
 @import './pages/pages.css';
 @import './navbar.css';
 @import './mainmint.css';
+@import './components/Metamask.css';
+@import './Mainpage.css';
 
 
 .App {
@@ -43,10 +45,3 @@
     background-position: 40% 40%;
 }
 
-
-@media (max-width: 400px), (orientation: landscape) {
-    .mint_fullsection{
-        position: relative;
-        top: 100px;
-    }
-}

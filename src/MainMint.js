@@ -55,8 +55,8 @@ export default function MainMint(props) {
     }
 
   return (
-    <Flex justify='center' align='center'  paddingBottom='150px' >
-        <Box className='mint_fullsection' width='520px'>
+    <Flex className='mint_fullsection' justify='center' align='center'  paddingBottom='150px' >
+        <Box width='520px'>
         {isConnected ? (
             <div>
                 <Flex justify='center' align='center'>
@@ -78,15 +78,7 @@ export default function MainMint(props) {
                     </Button>
             </div>
         ) : (
-                <Text
-                    marginTop='20px'
-                    fontSize='30px'
-                    letterSpacing='-5.5%'
-                    fontFamily='VT323'
-                    textShadow='0 2px #000000'
-                    color='	#a70b0b'
-                    padding='20px'
-                >
+                <Text className='main_text' >
                     In order to mint we suggest that one uses 
                     an ethereum test network wallet (e.g. Goerli),
                      otherwise money will be lost   

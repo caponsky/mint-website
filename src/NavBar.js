@@ -41,18 +41,15 @@ export default function NavBar(props) {
                 </Link>
             </Flex>
             
-            <Flex justify="space-between" align='center' padding='30px' width='40%'>
+            <Flex justify="space-around" align='center' padding='30px' width='47%'>
                 <Box 
-                    margin='0 15px' 
-                    cursor='pointer' 
                     className='menu'
                     onClick={() => navigate('/')}
                 >
                     City punks
                 </Box>
+                <Spacer />
                 <Box 
-                    margin='0 15px' 
-                    cursor='pointer' 
                     className='menu'
                     onClick={() => navigate('/about')}
                 >
@@ -60,8 +57,6 @@ export default function NavBar(props) {
                 </Box>
                 <Spacer />
                 <Box 
-                    margin='0 15px' 
-                    cursor='pointer' 
                     className='menu'
                     onClick={() => navigate('/roadmap')}
                 >
@@ -69,15 +64,15 @@ export default function NavBar(props) {
                 </Box>
                 <Spacer />
                 <Box                 
-                    margin='0 15px' 
-                    cursor='pointer' 
                     className='menu'
                     onClick={() => navigate('/team')}
                 >
                     Team
                 </Box>
-                <Spacer />   
+                <Spacer /> 
+                <Box className='metamask_btn'>  
                 <Metamask accounts={props.accounts} setAccounts={props.setAccounts}/>
+                </Box>
             </Flex>
         </Flex>
         <Flex>
@@ -149,7 +144,7 @@ export default function NavBar(props) {
                     </Link>
                 </Flex>
                 <Box>
-                <Metamask accounts={props.accounts} setAccounts={props.setAccounts}/>
+                <Metamask accounts={props.accounts} setAccounts={props.setAccounts} />
                 </Box>
             </Flex>
         </Flex>

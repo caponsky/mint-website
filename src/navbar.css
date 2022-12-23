@@ -1,4 +1,10 @@
 
+.menu {
+    size: 32px 64px;
+    margin: 0 15px; 
+    cursor: pointer; 
+}
+
 .btn_hambrg {
     border-radius: 5px;
     cursor: pointer;
@@ -39,7 +45,7 @@
     
 }
 
-@media (min-width: 451px) {
+@media (min-width: 551px) {
     .btn_hambrg {
         display: none !important;
     }
@@ -49,51 +55,14 @@
     
 }
 
-@media (max-width: 450px) {
-
+@media (max-width: 550px) {
     .nav {
         display: none !important;
     } 
-    
-    /*.btn_connect {
-        position: relative;
-        top:130px;
-        right:540px;
-        background-color:#ffdb72;
-        border-radius: 5px;
-        box-shadow: 0px 2px 2px 1px #0F0F0F;
-        color:black;
-        cursor: pointer;
-        font-family: inherit;
-        padding:10px 15px;
-        margin:0 15px;
+}
+
+@media (max-width: 1236px) {
+    .metamask_btn {
+        display: none !important;
     }
-    .btn_install {
-        position: relative;
-        top:130px;
-        right:540px;
-        background-color:#ffdb72;
-        border-radius: 5px;
-        box-shadow: 0px 2px 2px 1px #0F0F0F;
-        color:black;
-        cursor: pointer;
-        font-family: inherit;
-        padding:10px 15px;
-        margin:0 15px;
-    }
-    .cntd {
-        position: relative;
-        top:140px;
-        right:537px;
-    }
-    .menu {
-        position: relative ;
-        top: -50px;
-        right: 300px;
-    }
-    .socialmedia {
-        position: relative;
-        top: 25px;
-        left: 22px;
-    }*/
 }

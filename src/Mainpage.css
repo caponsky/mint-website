@@ -26,3 +26,9 @@
         margin-top: 50px;
     }
 }
+
+@media (max-width: 1236px) {
+    .for_mobile {
+        display: flex !important;
+    }
+}
